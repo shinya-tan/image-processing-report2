@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+  </head>
+  <body>
+    <h1>POST</h1>
+    <form enctype="multipart/form-data">
+      <input type="file" name="img">
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if get_corner_url %}
+      <p>コーナー検出</p>
+      <div>
+        <img src="{{ get_corner_url }}">
+      </div>
+      {% endif %}
+      {% if good_features_to_track_url %}
+      <p>Good Features to Track</p>
+      <div>
+        <img src="{{ good_features_to_track_url }}">
+      </div>
+      {% endif %}
+    </form>
+  </body>
+</html>

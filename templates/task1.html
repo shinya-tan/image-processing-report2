@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+  </head>
+  <body>
+    <h1>POST</h1>
+    <form enctype="multipart/form-data">
+      <input type="file" name="img">
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if show_image_url %}
+      <p>画像の表示</p>
+      <div>
+        <img src="{{ show_image_url }}">
+      </div>
+      {% endif %}
+
+      {% if gray_img_url %}
+      <p>グレースケールで表示</p>
+      <div>
+        <img src="{{ gray_img_url }}">
+      </div>
+      {% endif %}
+
+      {% if binarization_url %}
+      <p>画像の2値化</p>
+      <div>
+        <img src="{{ binarization_url }}">
+      </div>
+      {% endif %}
+
+      {% if resize_url %}
+      <p>画像のサイズ変更</p>
+      <div>
+        <img src="{{ resize_url }}">
+      </div>
+      {% endif %}
+
+      {% if trimming_url %}
+      <p>トリミング</p>
+      <div>
+        <img src="{{ trimming_url }}">
+      </div>
+      {% endif %}
+
+      {% if draw_shape_url %}
+      <p>図形の表示</p>
+      <div>
+        <img src="{{ draw_shape_url }}">
+      </div>
+      {% endif %}
+
+      {% if save_image_url %}
+      <p>画像の保存</p>
+      <div>
+        <img src="{{ save_image_url }}">
+      </div>
+      <p>{{ save_image_url }}</p>
+      {% endif %}
+
+      {% if flip_image_url %}
+      <p>画像の左右反転</p>
+      <div>
+        <img src="{{ flip_image_url }}">
+      </div>
+      {% endif %}
+
+      {% if blur_filter_url %}
+      <p>ぼかしフィルタ</p>
+      <div>
+        <img src="{{ blur_filter_url }}">
+      </div>
+      {% endif %}
+
+      {% if gaussian_filter_url %}
+      <p>ガウシアンフィルタ</p>
+      <div>
+        <img src="{{ gaussian_filter_url }}">
+      </div>
+      {% endif %}
+      
+      {% if sobel_filter_url %}
+      <p>Sobelフィルタ</p>
+      <div>
+        <img src="{{ sobel_filter_url }}">
+      </div>
+      {% endif %}
+
+      {% if canny_filter_url %}
+      <p>Cannyフィルタ</p>
+      <div>
+        <img src="{{ canny_filter_url }}">
+      </div>
+      {% endif %}
+
+      {% if perspective_transform_url %}
+      <p>透視変換</p>
+      <div>
+        <img src="{{ perspective_transform_url }}">
+      </div>
+      {% endif %}
+
+      {% if histogram_url %}
+      <p>グレースケールにしたヒストグラムの平坦化</p>
+      <div>
+        <img src="{{ histogram_url }}">
+      </div>
+      {% endif %}
+      {% if histogram_graph_url %}
+      <p>グラフ</p>
+      <div>
+        <img src="{{ histogram_graph_url }}">
+      </div>
+      {% endif %}
+    </form>
+  </body>
+</html>

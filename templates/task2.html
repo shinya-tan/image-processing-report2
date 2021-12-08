@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+  </head>
+  <body>
+    <h1>POST</h1>
+    <form enctype="multipart/form-data">
+      <input type="file" name="img">
+      <p>ガンマ値を入力してください</p>
+      <input type="number" name="value", step="0.1">
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if gamma_graph_url %}
+      <p>グラフ</p>
+      <div>
+        <img src="{{ gamma_graph_url }}">
+      </div>
+      {% endif %}
+      {% if gamma_calc_url %}
+      <p>ガンマ補正をかける(0.8)</p>
+      <div>
+        <img src="{{ gamma_calc_url }}">
+      </div>
+      {% endif %}
+      {% if gamma_calc_extension_url %}
+      <p>自分で入力した値でガンマ補正をかける</p>
+      <div>
+        <img src="{{ gamma_calc_extension_url }}">
+      </div>
+      {% endif %}
+    </form>
+  </body>
+</html>

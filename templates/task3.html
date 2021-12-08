@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+  </head>
+  <body>
+    <h1>POST</h1>
+    <form enctype="multipart/form-data">
+      <p>画像を2つ選択してください</p>
+      <input type="file" name="img1">
+      <input type="file" name="img2">
+      <p>マスクするファイルを選択してください.</p>
+      <input type="file" name="mask">
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if add_weighted_url %}
+      <p>アルファブレンド</p>
+      <div>
+        <img src="{{ add_weighted_url }}">
+      </div>
+      {% endif %}
+
+      {% if bitwise_and_url %}
+      <p>マスク処理</p>
+      <div>
+        <img src="{{ bitwise_and_url }}">
+      </div>
+      {% endif %}
+
+      {% if add_weighted_for_np_url %}
+      <p>numpyでアルファブレンド</p>
+      <div>
+        <img src="{{ add_weighted_for_np_url }}">
+      </div>
+      {% endif %}
+
+      {% if add_weighted_for_np_and_clip_url %}
+      <p>numpyでアルファブレンド(一律に値を加えた場合)</p>
+      <div>
+        <img src="{{ add_weighted_for_np_and_clip_url }}">
+      </div>
+      {% endif %}
+
+      {% if mask_for_np_url %}
+      <p>numpyでマスク処理</p>
+      <div>
+        <img src="{{ mask_for_np_url }}">
+      </div>
+      {% endif %}
+      {% if complicate_mask_alpha_blend_url %}
+      <p>numpyで複雑なアルファブレンドとマスク処理</p>
+      <div>
+        <img src="{{ complicate_mask_alpha_blend_url }}">
+      </div>
+      {% endif %}
+      {% if complicate_mask_alpha_blend_more_file_url %}
+      <p>numpyで複雑なアルファブレンドと自身で選択したファイルでのマスク処理</p>
+      <div>
+        <img src="{{ complicate_mask_alpha_blend_more_file_url }}">
+      </div>
+      {% endif %}
+      {% if draw_mask_url %}
+      <p>マスク画像の作成</p>
+      <div>
+        <img src="{{ draw_mask_url }}">
+      </div>
+      {% endif %}
+      {% if draw_mask_image_url %}
+      <p>図形描画によるマスク画像処理</p>
+      <div>
+        <img src="{{ draw_mask_image_url }}">
+      </div>
+      {% endif %}
+    </form>
+  </body>
+</html>

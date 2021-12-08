@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+  </head>
+  <body>
+    <h1>POST</h1>
+    <form enctype="multipart/form-data">
+      <input type="file" name="img">
+      <button type="submit" formmethod="post">POST</button></p>
+      {% if get_color_url %}
+      <p>背景色の抽出</p>
+      <div>
+        <img src="{{ get_color_url }}">
+      </div>
+      {% endif %}
+    </form>
+  </body>
+</html>
